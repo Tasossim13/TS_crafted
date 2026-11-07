@@ -42,3 +42,22 @@ menuToggle.addEventListener('click', () => {
   menuToggle.setAttribute('aria-expanded', String(!isOpen));
   nav.classList.toggle('mobile-open', !isOpen);
 });
+
+
+// Language Switcher (EN / EL)
+const langBtns = document.querySelectorAll('.lang-btn');
+function setLanguage(lang) {
+  document.documentElement.setAttribute('lang', lang);
+  document.body.setAttribute('data-lang', lang);
+  langBtns.forEach((btn) => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+  try {
+    localStorage.setItem('site_lang', lang);
+  } catch (e) {}
+}
+langBtns.forEach((btn) => {
+  btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+});
+const initialLang = new URLSearchParams(window.location.search).get('lang') || localStorage.getItem('site_lang') || 'en';
+setLanguage(initialLang);
