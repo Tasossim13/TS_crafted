@@ -19,8 +19,28 @@
 .mock-browser-image .browser-bar span{margin-left:auto;margin-right:auto}
 .browser-img-wrap{flex:1 1 auto;min-height:0;width:100%;position:relative;overflow:hidden;background:#111210}
 .project-img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.notalagou-img{object-position:left center}
 .project-visual:hover .project-img{transform:scale(1.08)}
 
 /* Multilingual Toggle Rules */
 body[data-lang="en"] .lang-el{display:none !important}
 body[data-lang="el"] .lang-en{display:none !important}
+.footer-mark img {
+  width: 58px;
+  height: 58px;
+  display: block;
+  filter: none !important;
+  opacity: 1;
+}
+.footer-mark {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  align-self: center;
+}
+.footer-bottom > span:last-child {
+  text-align: right;
+}
