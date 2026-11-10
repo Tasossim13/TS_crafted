@@ -44,3 +44,27 @@ body[data-lang="el"] .lang-en{display:none !important}
 .footer-bottom > span:last-child {
   text-align: right;
 }
+
+.marquee-track {
+  gap: 0;
+}
+
+.marquee-set {
+  display: flex;
+  flex: 0 0 max-content;
+  gap: 38px;
+  align-items: center;
+}
+
+.marquee-set b {
+  display: inline-block;
+  min-width: 30px;
+  padding-left: 8px;
+  text-align: center;
+}
+
+@keyframes slide {
+  to {
+    transform: translateX(-50%);
+  }
+}
