@@ -27,14 +27,6 @@ document.querySelectorAll('.magnetic').forEach((button) => {
   });
 });
 
-const form = document.querySelector('.contact-form');
-const status = document.querySelector('.form-status');
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  status.textContent = 'Thanks — your inquiry is on its way.';
-  form.reset();
-});
-
 const menuToggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.desktop-nav');
 menuToggle.addEventListener('click', () => {
