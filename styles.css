@@ -63,6 +63,29 @@ body[data-lang="el"] .lang-en{display:none !important}
   text-align: center;
 }
 
+.marquee {
+  margin-top: 24px;
+}
+
+.form-status.is-error {
+  color: #ffb4a9;
+}
+
+.site-header {
+  position: fixed;
+  transition: transform 0.3s ease;
+}
+
+.site-header.header-hidden {
+  transform: translateY(-100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header {
+    transition: none;
+  }
+}
+
 .mock-browser-image {
   height: auto;
   aspect-ratio: 16 / 9;
